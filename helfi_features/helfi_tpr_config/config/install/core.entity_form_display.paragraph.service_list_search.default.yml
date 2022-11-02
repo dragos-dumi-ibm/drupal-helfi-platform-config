@@ -9,6 +9,7 @@ dependencies:
     - field.field.paragraph.service_list_search.field_service_list_title
     - paragraphs.paragraphs_type.service_list_search
   module:
+    - select2
     - text
 id: paragraph.service_list_search.default
 targetEntityType: paragraph
@@ -31,14 +32,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_service_list_services:
-    type: entity_reference_autocomplete
+    type: select2_entity_reference
     weight: 2
     region: content
     settings:
+      width: 100%
+      autocomplete: false
       match_operator: CONTAINS
       match_limit: 10
-      size: 60
-      placeholder: ''
     third_party_settings: {  }
   field_service_list_title:
     type: string_textfield
