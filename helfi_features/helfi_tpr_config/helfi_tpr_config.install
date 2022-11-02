@@ -606,9 +606,10 @@ function helfi_tpr_config_update_9028() {
 function helfi_tpr_config_update_9029() {
   /** @var \Drupal\update_helper\Updater $updateHelper */
   $updateHelper = \Drupal::service('update_helper.updater');
-  
+
   // Configuration locations
   $configInstallLocation = dirname(__FILE__) . '/config/install/';
+  $configTranslationLocation = dirname(__FILE__) . '/config/language/';
 
   // Changed configurations for TPR-unit to have a field where you can define unit type.
   $configurations = [
@@ -624,6 +625,7 @@ function helfi_tpr_config_update_9029() {
 
   foreach ($configurations as $configuration) {
     ConfigHelper::installNewConfig($configInstallLocation, $configuration);
+    ConfigHelper::installNewConfigTranslation($configTranslationLocation, $configuration);
   }
 
   // Output logged messages to related channel of update execution.
