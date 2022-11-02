@@ -611,7 +611,7 @@ function helfi_tpr_config_update_9029() {
   $configInstallLocation = dirname(__FILE__) . '/config/install/';
   $configTranslationLocation = dirname(__FILE__) . '/config/language/';
 
-  // Changed configurations for TPR-unit to have a field where you can define unit type.
+  // Configurations to be installed.
   $configurations = [
     'field.storage.paragraph.field_service_list_service_ids',
     'paragraphs.paragraphs_type.service_list_search',
