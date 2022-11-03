@@ -631,3 +631,27 @@ function helfi_tpr_config_update_9029() {
   // Output logged messages to related channel of update execution.
   return $updateHelper->logger()->output();
 }
+
+/**
+ * Creating new view mode teaser search result.
+ */
+function helfi_tpr_config_update_9030() {
+  /** @var \Drupal\update_helper\Updater $updateHelper */
+  $updateHelper = \Drupal::service('update_helper.updater');
+
+  // Configurations location.
+  $configInstallLocation = dirname(__FILE__) . '/config/install/';
+
+  // Configurations to be installed.
+  $configurations = [
+    'core.entity_view_display.tpr_service.tpr_service.teaser_search_result',
+    'core.entity_view_mode.tpr_service.teaser_search_result'
+  ];
+
+  foreach ($configurations as $configuration) {
+    ConfigHelper::installNewConfig($configInstallLocation, $configuration);
+  }
+
+  // Output logged messages to related channel of update execution.
+  return $updateHelper->logger()->output();
+}
