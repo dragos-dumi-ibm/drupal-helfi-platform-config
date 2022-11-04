@@ -692,8 +692,8 @@ display:
           exposed: true
           expose:
             operator_id: combine_op
-            label: 'Search services'
-            description: 'Search services by name or description.'
+            label: 'Services search'
+            description: ''
             use_operator: false
             operator: combine_op
             operator_limit_selection: false
@@ -709,7 +709,7 @@ display:
               content_producer: '0'
               editor: '0'
               admin: '0'
-            placeholder: ''
+            placeholder: 'Enter a keyword'
           is_grouped: false
           group_info:
             label: ''

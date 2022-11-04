@@ -8,10 +8,7 @@ dependencies:
     - field.field.tpr_service.tpr_service.field_metatags
     - field.field.tpr_service.tpr_service.field_sidebar_content
   module:
-    - entity_reference_revisions
     - helfi_tpr
-    - link
-    - metatag
     - text
 _core:
   default_config_hash: xI-QgKUvsjLc0SRc8bpDE336uJXT5rVP6K8TirZUzw8
@@ -21,66 +18,20 @@ bundle: tpr_service
 mode: teaser_search_result
 content:
   description:
-    type: text_default
+    type: text_summary_or_trimmed
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
-    weight: 3
+    weight: 1
     region: content
   errand_services:
-    type: entity_reference_entity_view
+    type: entity_reference_label
     label: hidden
     settings:
-      view_mode: default
-      link: true
+      link: false
     third_party_settings: {  }
-    weight: 6
-    region: content
-  field_content:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 4
-    region: content
-  field_lower_content:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 5
-    region: content
-  field_metatags:
-    type: metatag_empty_formatter
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_sidebar_content:
-    type: entity_reference_revisions_entity_view
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 8
-    region: content
-  links:
-    type: link
-    label: hidden
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    weight: 7
+    weight: 2
     region: content
   name:
     type: string
@@ -90,25 +41,15 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  name_override:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  toc_enabled:
-    type: boolean
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 2
-    region: content
 hidden:
   created: true
+  field_content: true
+  field_lower_content: true
+  field_metatags: true
+  field_sidebar_content: true
   langcode: true
+  links: true
+  name_override: true
   name_synonyms: true
+  service_id: true
+  toc_enabled: true

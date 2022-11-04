@@ -25,14 +25,14 @@ content:
     third_party_settings: {  }
   field_service_list_service_ids:
     type: number
-    weight: 3
+    weight: 2
     region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
   field_service_list_services:
     type: select2_entity_reference
-    weight: 2
+    weight: 3
     region: content
     settings:
       width: 100%

@@ -613,10 +613,8 @@ function helfi_tpr_config_update_9029() {
 
   // Configurations to be installed.
   $configurations = [
-    'field.storage.paragraph.field_service_list_service_ids',
     'paragraphs.paragraphs_type.service_list_search',
     'field.field.paragraph.service_list_search.field_service_list_title',
-    'field.field.paragraph.service_list_search.field_service_list_service_ids',
     'field.field.paragraph.service_list_search.field_service_list_services',
     'field.field.paragraph.service_list_search.field_service_list_description',
     'core.entity_view_display.paragraph.service_list_search.default',
@@ -627,6 +625,13 @@ function helfi_tpr_config_update_9029() {
     ConfigHelper::installNewConfig($configInstallLocation, $configuration);
     ConfigHelper::installNewConfigTranslation($configTranslationLocation, $configuration);
   }
+
+  // Install services_ids
+  ConfigHelper::installNewField(
+    $configInstallLocation,
+    'field.storage.paragraph.field_service_list_service_ids',
+    'field.field.paragraph.service_list_search.field_service_list_service_ids'
+  );
 
   // Output logged messages to related channel of update execution.
   return $updateHelper->logger()->output();
