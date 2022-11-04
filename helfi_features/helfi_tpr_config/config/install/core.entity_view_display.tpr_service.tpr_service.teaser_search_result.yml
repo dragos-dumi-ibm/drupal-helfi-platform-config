@@ -1,6 +1,5 @@
-uuid: c1ee916d-b042-46d8-9361-9a3c317e54b2
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - core.entity_view_mode.tpr_service.teaser_search_result
