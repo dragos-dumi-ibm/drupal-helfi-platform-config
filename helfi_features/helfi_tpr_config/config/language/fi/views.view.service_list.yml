@@ -30,6 +30,14 @@ display:
             format: full_html
   block_1:
     display_options:
+      exposed_form:
+        options:
+          submit_button: Etsi
+      pager:
+        options:
+          tags:
+            previous: 'Edellinen'
+            next: 'Seuraava'
       filters:
         combine:
           expose:

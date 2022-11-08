@@ -662,7 +662,7 @@ function helfi_tpr_config_update_9030() {
 }
 
 /**
- * Add new display for service list view.
+ * Add new display for service list view with labels translations.
  */
 function helfi_tpr_config_update_9031() {
 
@@ -673,30 +673,9 @@ function helfi_tpr_config_update_9031() {
   // Execute configuration update definitions with logging of success.
   $updateHelper->executeUpdate('helfi_tpr_config', 'helfi_tpr_config_update_9031');
 
-  // Output logged messages to related channel of update execution.
-  return $updateHelper->logger()->output();
-}
-
-
-
-/**
- * Update view service list combine filter to show title and placeholder text for search.
- */
-function helfi_tpr_config_update_9032() {
-  /** @var \Drupal\update_helper\Updater $updateHelper */
-  $updateHelper = \Drupal::service('update_helper.updater');
-
-  // Execute configuration update definitions with logging of success.
-  $updateHelper->executeUpdate('helfi_tpr_config', 'helfi_tpr_config_update_9032');
-
-  // Output logged messages to related channel of update execution.
-  return $updateHelper->logger()->output();
-}
-
-/**
- * Add translation for view service list fields.
- */
-function helfi_tpr_config_update_9033() {
   $configTranslationLocation = dirname(__FILE__) . '/config/language/';
   ConfigHelper::installNewConfigTranslation($configTranslationLocation, 'views.view.service_list');
+
+  // Output logged messages to related channel of update execution.
+  return $updateHelper->logger()->output();
 }

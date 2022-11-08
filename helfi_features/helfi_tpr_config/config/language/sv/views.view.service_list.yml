@@ -8,13 +8,21 @@ display:
       empty:
         area:
           content:
-            value: "<p>No results</p>\r\n"
+            value: "<p>Inga resultat</p>\r\n"
             format: full_html
       exposed_form:
         options:
           submit_button: Sök
   block_1:
     display_options:
+      exposed_form:
+        options:
+          submit_button: Sök
+      pager:
+        options:
+          tags:
+            previous: 'Tidigare'
+            next: 'Nästa'
       filters:
         combine:
           expose:

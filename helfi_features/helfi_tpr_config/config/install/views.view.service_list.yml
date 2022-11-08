@@ -541,10 +541,10 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
-            first: '« First'
-            last: 'Last »'
+            next: Next
+            previous: Previous
+            first: 'First'
+            last: 'Last'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -554,6 +554,16 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Search
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       sorts:
         name:
           id: name
@@ -781,6 +791,7 @@ display:
       defaults:
         title: false
         pager: false
+        exposed_form: false
         style: false
         row: false
         relationships: false
