@@ -5,4 +5,18 @@ display:
         options:
           views_infinite_scroll:
             button_text: 'Ladda fler tjänster'
-
+      empty:
+        area:
+          content:
+            value: "<p>No results</p>\r\n"
+            format: full_html
+      exposed_form:
+        options:
+          submit_button: Sök
+  block_1:
+    display_options:
+      filters:
+        combine:
+          expose:
+            label: 'Rådgivningstjänstens namn eller sökterm'
+            placeholder: 't.ex. Socialrådgivning, hälsa eller digitalt Sök'
