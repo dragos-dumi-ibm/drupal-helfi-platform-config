@@ -33,25 +33,35 @@ content:
       view_mode: default
       sort_order:
         ESERVICE:
+          show: '1'
           weight: '0'
         CHAT:
+          show: '1'
           weight: '1'
         EMAIL:
+          show: '1'
           weight: '2'
         TELEPHONE:
+          show: '1'
           weight: '3'
         PRINTABLE_FORM:
           weight: '4'
+          show: 0
         LOCAL:
           weight: '5'
+          show: 0
         SMS:
           weight: '6'
+          show: 0
         WEBPAGE:
           weight: '7'
+          show: 0
         MAIL:
           weight: '8'
+          show: 0
         TELEFAX:
           weight: '9'
+          show: 0
     third_party_settings: {  }
     weight: 2
     region: content
