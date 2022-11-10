@@ -679,3 +679,19 @@ function helfi_tpr_config_update_9031() {
   // Output logged messages to related channel of update execution.
   return $updateHelper->logger()->output();
 }
+
+/**
+ * Add new display for service list view with labels translations.
+ */
+function helfi_tpr_config_update_9032() {
+
+  // Enable the 'Hide sidebar navigation from this page' to unit and service.
+  /** @var \Drupal\update_helper\Updater $updateHelper */
+  $updateHelper = \Drupal::service('update_helper.updater');
+
+  $configTranslationLocation = dirname(__FILE__) . '/config/language/';
+  ConfigHelper::installNewConfigTranslation($configTranslationLocation, 'core.entity_view_display.tpr_service.tpr_service.teaser_search_result');
+
+  // Output logged messages to related channel of update execution.
+  return $updateHelper->logger()->output();
+}
