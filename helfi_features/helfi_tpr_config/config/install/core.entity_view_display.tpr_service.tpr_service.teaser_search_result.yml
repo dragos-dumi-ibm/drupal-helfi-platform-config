@@ -33,25 +33,49 @@ content:
       view_mode: default
       sort_order:
         ESERVICE:
-          weight: '0'
+          label: ESERVICE
+          show: false
+          weight: 0
         CHAT:
-          weight: '1'
+          label: Chat
+          show: true
+          weight: 1
         EMAIL:
-          weight: '2'
+          label: Email
+          show: true
+          weight: 2
         TELEPHONE:
-          weight: '3'
+          label: Telephone
+          show: true
+          weight: 3
         PRINTABLE_FORM:
-          weight: '4'
+          label: Form
+          show: true
+          weight: 4
         LOCAL:
-          weight: '5'
+          label: LOCAL
+          show: false
+          weight: 5
         SMS:
-          weight: '6'
+          label: SMS
+          show: false
+          weight: 6
         WEBPAGE:
-          weight: '7'
+          label: WEBPAGE
+          show: false
+          weight: 7
         MAIL:
-          weight: '8'
+          label: MAIL
+          show: false
+          weight: 8
         TELEFAX:
-          weight: '9'
+          label: TELEFAX
+          show: false
+          weight: 9
+        OFFICE:
+          label: 'Service point'
+          show: true
+          weight: 99
     third_party_settings: {  }
     weight: 2
     region: content
