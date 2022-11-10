@@ -651,13 +651,16 @@ function helfi_tpr_config_update_9030() {
   $configurations = [
     'core.entity_view_display.tpr_service.tpr_service.teaser_search_result',
     'core.entity_view_mode.tpr_service.teaser_search_result',
-    'core.entity_view_display.tpr_service.tpr_service.teaser_search_result'
   ];
 
   foreach ($configurations as $configuration) {
     ConfigHelper::installNewConfig($configInstallLocation, $configuration);
 
   }
+
+  $configTranslationLocation = dirname(__FILE__) . '/config/language/';
+  ConfigHelper::installNewConfigTranslation($configTranslationLocation, 'core.entity_view_display.tpr_service.tpr_service.teaser_search_result');
+
 
   // Output logged messages to related channel of update execution.
   return $updateHelper->logger()->output();
