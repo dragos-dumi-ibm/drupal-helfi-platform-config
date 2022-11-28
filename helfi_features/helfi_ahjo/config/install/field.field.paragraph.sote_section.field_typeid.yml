@@ -1,0 +1,23 @@
+uuid: 49374ac6-6a8b-47af-861e-24fe0e24bc92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_typeid
+    - paragraphs.paragraphs_type.sote_section
+id: paragraph.sote_section.field_typeid
+field_name: field_typeid
+entity_type: paragraph
+bundle: sote_section
+label: TypeId
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

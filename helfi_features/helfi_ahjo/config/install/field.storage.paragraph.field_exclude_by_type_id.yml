@@ -1,0 +1,20 @@
+uuid: 10b9b303-2fe9-4fb5-85cc-dbf1c026a9f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_exclude_by_type_id
+field_name: field_exclude_by_type_id
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 10
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

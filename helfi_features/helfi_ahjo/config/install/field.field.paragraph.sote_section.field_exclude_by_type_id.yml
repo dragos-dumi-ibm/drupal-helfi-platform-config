@@ -1,0 +1,23 @@
+uuid: 734b2eca-5f95-4135-ac12-230cac0551f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_exclude_by_type_id
+    - paragraphs.paragraphs_type.sote_section
+id: paragraph.sote_section.field_exclude_by_type_id
+field_name: field_exclude_by_type_id
+entity_type: paragraph
+bundle: sote_section
+label: 'Exclude by Type Id'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
