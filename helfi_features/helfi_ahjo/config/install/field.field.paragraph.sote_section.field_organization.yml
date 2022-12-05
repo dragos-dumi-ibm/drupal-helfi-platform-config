@@ -1,0 +1,29 @@
+uuid: e1325791-e9ec-49a0-bc95-079ba042b945
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_organization
+    - paragraphs.paragraphs_type.sote_section
+    - taxonomy.vocabulary.sote_section
+id: paragraph.sote_section.field_organization
+field_name: field_organization
+entity_type: paragraph
+bundle: sote_section
+label: Organization
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sote_section: sote_section
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
