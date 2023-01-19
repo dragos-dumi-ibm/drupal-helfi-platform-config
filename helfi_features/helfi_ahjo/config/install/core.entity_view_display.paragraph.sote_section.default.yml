@@ -1,0 +1,41 @@
+uuid: 578924d8-3627-42db-916c-3b907c4038f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sote_section.field_exclude_by_type_id
+    - field.field.paragraph.sote_section.field_max_depth
+    - field.field.paragraph.sote_section.field_organization
+    - paragraphs.paragraphs_type.sote_section
+id: paragraph.sote_section.default
+targetEntityType: paragraph
+bundle: sote_section
+mode: default
+content:
+  field_exclude_by_type_id:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_max_depth:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_organization:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

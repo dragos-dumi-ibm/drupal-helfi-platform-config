@@ -1,0 +1,43 @@
+uuid: 69fba529-bb7b-443b-b68f-2f09bb0f71b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sote_section.field_exclude_by_type_id
+    - field.field.paragraph.sote_section.field_max_depth
+    - field.field.paragraph.sote_section.field_organization
+    - paragraphs.paragraphs_type.sote_section
+  module:
+    - select2
+id: paragraph.sote_section.default
+targetEntityType: paragraph
+bundle: sote_section
+mode: default
+content:
+  field_exclude_by_type_id:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_max_depth:
+    type: number
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_organization:
+    type: select2_entity_reference
+    weight: 0
+    region: content
+    settings:
+      width: 100%
+      autocomplete: false
+      match_operator: CONTAINS
+      match_limit: 10
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
